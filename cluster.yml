@@ -1,0 +1,15 @@
+- name: Create K8S master Environment
+  hosts: master
+  roles:
+          - role: master_node
+
+
+- name: Create K8S slave Environment
+  hosts: slave
+  vars_prompt:
+    - name: token
+      prompt: "Enter Token To Join To Master: "
+      private: no
+  roles:
+          - role: slave_node
+

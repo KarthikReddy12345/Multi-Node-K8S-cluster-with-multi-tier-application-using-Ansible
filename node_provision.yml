@@ -1,0 +1,5 @@
+- name: Create Instances on AWS
+  hosts: localhost
+  roles:
+          - role: ec2
+

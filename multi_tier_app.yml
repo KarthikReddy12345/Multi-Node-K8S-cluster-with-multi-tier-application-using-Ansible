@@ -1,0 +1,6 @@
+- name: Create Multi-tier-application
+  gather_facts: no
+  hosts: master
+  roles:
+          - role: multi_tier_app
+
